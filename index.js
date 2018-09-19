@@ -21,6 +21,14 @@ function dec(n){
 function makeInt(n){
   return parseFloat(n);
 }
-function preserveDecimal(n, base){
-  return parseInt(n, base);
+/*function roughScale(x, base) {
+  var parsed = parseInt(x, base);
+  if (isNaN(parsed)) { return 0 }
+  return parsed * 100;
+}
+*/
+function preserveDecimal(n, base) {
+  var parsed = parseInt(n, base);
+  if (isNaN(parsed)){ return 0}
+  return parsed * 100;
 }
